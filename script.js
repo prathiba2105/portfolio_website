@@ -54,3 +54,17 @@ document.getElementById("home-content").style.display="none";
 document.getElementById("about-content").style.display="block";
 
 }
+
+var typed = new Typed(".auto-type", {
+    strings: [
+        "Aspiring Data Engineer",
+        "Python Developer",
+        "Power BI Developer",
+        "SQL Enthusiast",
+        "Data Analyst"
+    ],
+    typeSpeed: 70,
+    backSpeed: 50,
+    backDelay: 1500,
+    loop: true
+});
