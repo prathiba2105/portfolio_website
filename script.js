@@ -68,3 +68,21 @@ var typed = new Typed(".auto-type", {
     backDelay: 1500,
     loop: true
 });
+
+const skillCards = document.querySelectorAll(".skill-card");
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+
+            skillCards.forEach((card,index)=>{
+                setTimeout(()=>{
+                    card.classList.add("show");
+                }, index * 600);
+            });
+
+        }
+    });
+},{threshold:0.3});
+
+observer.observe(document.querySelector("#skills"));
